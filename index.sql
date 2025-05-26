@@ -65,8 +65,8 @@ INSERT INTO rangers (name, region) VALUES
 
 -- Problem 2
 
-SELECT COUNT(DISTINCT scientific_name) AS unique_species_count
-FROM species;
+SELECT COUNT(DISTINCT species_id) AS unique_species_count
+FROM sightings;
 
 -- Problem 3
 
@@ -124,10 +124,7 @@ FROM sightings;
 
 
 DELETE FROM rangers
-WHERE ranger_id IN (
+WHERE ranger_id NOT IN (
     SELECT DISTINCT ranger_id FROM sightings
 );
-
-
-
 
