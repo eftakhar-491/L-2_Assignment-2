@@ -81,8 +81,6 @@ JOIN sightings ON sightings.ranger_id = rangers.ranger_id
 GROUP BY name;
 
 -- Problem 5
--- full issues
-
 
 SELECT common_name
 FROM species
